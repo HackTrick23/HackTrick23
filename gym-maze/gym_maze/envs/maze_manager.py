@@ -289,7 +289,7 @@ class CipherRiddle(Riddle):
         with open(self.riddle_dir_path, "r") as r:
             riddle_collection = json.load(r)
         
-        riddle_id = random.randrange(0,len(riddle_collection)-1)
+        riddle_id = 0
         
         riddle = riddle_collection[riddle_id]
         self.riddle_question = riddle['question']
@@ -306,7 +306,7 @@ class CaptchaRiddle(Riddle):
         with open(self.riddle_dir_path, "r") as r:
             riddle_collection = json.load(r)
         
-        riddle_id = random.randrange(0,len(riddle_collection)-1)
+        riddle_id = 0
         
         riddle = riddle_collection[riddle_id]
         self.riddle_question = riddle['question']
@@ -323,7 +323,7 @@ class ServerRiddle(Riddle):
         with open(self.riddle_dir_path, "r") as r:
             riddle_collection = json.load(r)
         
-        riddle_id = random.randrange(0,len(riddle_collection)-1)
+        riddle_id = 0
         
         riddle = riddle_collection[riddle_id]
         self.riddle_question = riddle['question']
@@ -344,7 +344,7 @@ class PcapRiddle(Riddle):
         with open(self.riddle_dir_path, "r") as r:
             riddle_collection = json.load(r)
         
-        riddle_id = random.randrange(0,len(riddle_collection)-1)
+        riddle_id = 0
         
         riddle = riddle_collection[riddle_id]
         self.riddle_question = riddle['question']
