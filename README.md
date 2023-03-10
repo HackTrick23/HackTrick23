@@ -37,3 +37,67 @@ if __name__ == "__main__":
 - Make sure that you are using the correct agent_id.
 - Riddle solvers will be imported from `riddle_solvers.py`, so make sure to implement your riddle solutions there.
 - Run `submission_solver.py`
+
+### Endpoints used in submission 
+Start by calling /init endpoint to initialize a game, then use /move to move inside the maze. To solve a riddle call /solve.
+After finishing the attempt call /leave
+
+### /init
+
+#### POST
+
+##### Description:
+
+Initialize an agent, this endpoint should be used for first time connecting to the server
+
+
+##### Request
+
+{ "agentId" : "ABC123" }
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | Successful operation |
+| 400 | Connection refused, Invalid input |
+
+### /move
+
+#### POST
+
+##### Description:
+
+Send a move action
+
+##### Request
+
+{ "agentId" : "ABC123", "action" : "N" }
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | Successful operation |
+| 400 | Invalid input |
+| 403 | Action not allowed |
+
+### /solve
+
+#### POST
+
+##### Description:
+
+Solving a riddle
+
+
+##### Request
+
+{ "agentId" : "ABC123", "riddleType" : "captcha", "solution" : "solution" }
+
+##### Responses
+
+| Code | Description |
+| ---- | ----------- |
+| 200 | Successful operation |
+| 400 | Invalid input |
