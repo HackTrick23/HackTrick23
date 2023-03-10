@@ -46,7 +46,7 @@ def submission_inference(riddle_solvers):
     while(True):
         # Select an action
         state_0 = obv
-        action = select_action(state_0) # Random action
+        action, action_index = select_action(state_0) # Random action
         response = move(agent_id, action)
         if not response.status_code == 200:
             print(response)
