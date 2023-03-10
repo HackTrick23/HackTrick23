@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maze Renderer</title>
+    <link rel="icon" href="./assets/heroE.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img id="dell_logo" src="./assets/DellTech_Logo.png" alt="Dell Logo" />
+      <div class="title">
+        <img
+          id="hacktrick_img"
+          src="./assets/hacktrick_img.png"
+          alt="Hacktrick Logo"
+        />
+        <h4>Maze Renderer</h4>
+      </div>
+    </div>
+    <div class="container">
+      <div class="game">
+        <h2 id="game-header" class="game-labels"></h2>
+        <div id="maze-container"></div>
+        <div class="controls">
+          <h2 class="game-score">
+            Actions: <span id="actions">0</span>, Rescued:
+            <span id="rescued">0</span>
+          </h2>
+          <img
+            class="btn"
+            id="play-btn"
+            src="./assets/play-btn.png"
+            alt=""
+            title="play"
+          />
+          <img
+            class="btn"
+            id="stop-btn"
+            src="./assets/stop-btn.png"
+            alt=""
+            title="stop"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

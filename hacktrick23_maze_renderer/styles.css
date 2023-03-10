@@ -1,0 +1,110 @@
+body {
+    background: url('./assets/hackathon_bg.png');
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    color: white;
+}
+
+#dell_logo {
+    height: 20px;
+    margin-top: 15px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.title {
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
+.title h4 {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+}
+
+#hacktrick_img {
+    height: 70px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#maze {
+    min-height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+}
+
+.maze-box {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+
+}
+
+.maze-img {
+    height: 50px;
+    width: 50px;
+}
+
+.hero-img {
+    height: 60%;
+    width: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.maze-controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game h2 {
+    margin: 0;
+    display: inline;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    height: 30px;
+    cursor: pointer;
+}
