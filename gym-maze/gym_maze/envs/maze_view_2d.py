@@ -115,7 +115,7 @@ class MazeView2D:
 
                 if y_direction < 0:
                     y_direction = 1
-                elif y_direction > 1:
+                elif y_direction > 0:
                     y_direction = -1
                 else:
                     y_direction = 0
