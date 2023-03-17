@@ -158,13 +158,18 @@ class MazeManager():
             raise('Agent Not Found')
         
     def calculate_final_score(self, agent_id,riddlesTimeDictionary):
-        rescue_score = (1000*self.maze_map[agent_id].maze_view.rescued_items)/(self.maze_map[agent_id].steps)
+        num_of_rescued_items = self.maze_map[agent_id].maze_view.rescued_items
+        multiplier = 250 * num_of_rescued_items
+        rescue_score = (multiplier*num_of_rescued_items)/(self.maze_map[agent_id].steps)
         riddles_score = 0
         riddles_score_dict = dict()
         for riddle in self.riddles_dict[agent_id].riddles.values():
             riddle_score = self.riddle_scores[riddle.riddle_type]*riddle.solved()
             if riddle_score > 0:
-                riddle_score = riddle_score / (riddlesTimeDictionary.get(riddle.riddle_type,1)*100)
+                riddleSolutionTime = riddlesTimeDictionary.get(riddle.riddle_type,1)
+                if riddleSolutionTime < 0.01:
+                    riddleSolutionTime = 0.01
+                riddle_score = riddle_score / (riddleSolutionTime*100)
             riddles_score += riddle_score
             riddles_score_dict[riddle.riddle_type] = riddle_score
             
